@@ -24,7 +24,6 @@ body {
   to { opacity: 1; }
 }
 
-/* Container */
 .container {
   max-width: 600px;
   text-align: left;
@@ -45,7 +44,7 @@ h1 {
   line-height: 1.6;
   margin-top: 40px;
   animation: fadeQuote 1s forwards;
-  animation-delay: 1s; /* appears after title */
+  animation-delay: 1s; /* fades in after title */
 }
 
 @keyframes fadeQuote {
@@ -121,3 +120,20 @@ h1 {
 </div>
 
 <div class="side">
+  <div>pop button</div>
+  <button class="pop" id="popBtn">pop</button>
+</div>
+
+<script>
+// Load the pop sound once
+const popAudio = new Audio("https://www.soundjay.com/buttons/sounds/button-09.mp3");
+
+// Play the sound when the pop button is clicked
+document.getElementById("popBtn").addEventListener("click", () => {
+  popAudio.currentTime = 0; // restart if still playing
+  popAudio.play();
+});
+</script>
+
+</body>
+</html>
