@@ -3,114 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>tex totten</title>
 
 <style>
-
-body{
-margin:0;
-background:#0b0b0b;
-color:#ffffff;
-font-family: Arial, Helvetica, sans-serif;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-animation: fadein 1.2s ease;
+/* Body and fade-in animation */
+body {
+  margin: 0;
+  background: #0b0b0b;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  opacity: 0;
+  animation: fadein 1s forwards;
 }
 
-@keyframes fadein{
-from{
-opacity:0;
-transform:translateY(10px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+@keyframes fadein {
+  to { opacity: 1; }
 }
 
-.container{
-max-width:600px;
-text-align:left;
+/* Container */
+.container {
+  max-width: 600px;
+  text-align: left;
 }
 
-h1{
-font-weight:normal;
-font-size:2.5rem;
-margin-bottom:40px;
-text-transform:lowercase;
+/* Title */
+h1 {
+  font-weight: normal;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-transform: lowercase;
 }
 
-.quote{
-font-size:0.95rem;
-opacity:0.75;
-line-height:1.6;
-margin-top:40px;
+/* Quote */
+.quote {
+  font-size: 0.95rem;
+  opacity: 0.75;
+  line-height: 1.6;
+  margin-top: 40px;
 }
 
-.button{
-display:inline-block;
-padding:10px 20px;
-border:1px solid #ffffff;
-border-radius:4px;
-text-decoration:none;
-color:white;
-margin-bottom:20px;
-transition:.2s;
+/* Linktree button */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 20px;
+  transition: 0.2s;
 }
 
-.button:hover{
-background:white;
-color:black;
+.button:hover {
+  background: white;
+  color: black;
 }
 
-.side{
-position:fixed;
-right:40px;
-bottom:40px;
-text-align:center;
+/* Pop button on side */
+.side {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  text-align: center;
 }
 
-.pop{
-margin-top:8px;
-padding:10px 18px;
-border:1px solid white;
-background:none;
-color:white;
-cursor:pointer;
+.pop {
+  margin-top: 8px;
+  padding: 10px 18px;
+  border: 1px solid white;
+  background: none;
+  color: white;
+  cursor: pointer;
 }
-
 </style>
 </head>
 
 <body>
 
 <div class="container">
-
-<h1>tex totten</h1>
-
-<a class="button" href="https://linktr.ee/tex23">linktree</a>
-
-<div class="quote">
-"Before you criticize someone, you should walk a mile in their shoes. That way when you criticize them, you are a mile away from them and you have their shoes."
-</div>
-
+  <h1>tex totten</h1>
+  <a class="button" href="https://linktr.ee/tex23">linktree</a>
+  <div class="quote">
+    "Before you criticize someone, you should walk a mile in their shoes. That way when you criticize them, you are a mile away from them and you have their shoes."
+  </div>
 </div>
 
 <div class="side">
-<div>pop button</div>
-<button class="pop" onclick="popSound()">pop</button>
+  <div>pop button</div>
+  <button class="pop" onclick="popSound()">pop</button>
 </div>
 
 <script>
-
 function popSound(){
-let audio = new Audio("https://www.soundjay.com/buttons/sounds/button-09.mp3");
-audio.play();
+  let audio = new Audio("https://www.soundjay.com/buttons/sounds/button-09.mp3");
+  audio.play();
 }
-
 </script>
 
 </body>
