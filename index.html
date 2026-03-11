@@ -6,6 +6,7 @@
 <title>tex totten</title>
 
 <style>
+/* Body fade-in */
 body {
   margin: 0;
   background: #0b0b0b;
@@ -23,11 +24,13 @@ body {
   to { opacity: 1; }
 }
 
+/* Container */
 .container {
   max-width: 600px;
   text-align: left;
 }
 
+/* Title */
 h1 {
   font-weight: normal;
   font-size: 2.5rem;
@@ -35,13 +38,21 @@ h1 {
   text-transform: lowercase;
 }
 
+/* Quote fade-in */
 .quote {
   font-size: 0.95rem;
-  opacity: 0.75;
+  opacity: 0;
   line-height: 1.6;
   margin-top: 40px;
+  animation: fadeQuote 1s forwards;
+  animation-delay: 1s; /* appears after title */
 }
 
+@keyframes fadeQuote {
+  to { opacity: 0.75; }
+}
+
+/* Linktree button */
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -58,6 +69,7 @@ h1 {
   color: #000;
 }
 
+/* Pop button on side */
 .side {
   position: fixed;
   right: 40px;
@@ -79,6 +91,7 @@ h1 {
   transform: scale(1.2);
 }
 
+/* Tiny corner "a" */
 .corner-a {
   position: fixed;
   top: 10px;
@@ -108,16 +121,3 @@ h1 {
 </div>
 
 <div class="side">
-  <div>pop button</div>
-  <button class="pop" onclick="popSound()">pop</button>
-</div>
-
-<script>
-function popSound(){
-  var audio = new Audio("https://www.soundjay.com/buttons/sounds/button-09.mp3");
-  audio.play();
-}
-</script>
-
-</body>
-</html>
