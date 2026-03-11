@@ -6,11 +6,10 @@
 <title>tex totten</title>
 
 <style>
-/* Fade-in body */
 body {
   margin: 0;
   background: #0b0b0b;
-  color: #ffffff;
+  color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
@@ -24,13 +23,11 @@ body {
   to { opacity: 1; }
 }
 
-/* Container */
 .container {
   max-width: 600px;
   text-align: left;
 }
 
-/* Title */
 h1 {
   font-weight: normal;
   font-size: 2.5rem;
@@ -38,7 +35,6 @@ h1 {
   text-transform: lowercase;
 }
 
-/* Quote */
 .quote {
   font-size: 0.95rem;
   opacity: 0.75;
@@ -46,24 +42,22 @@ h1 {
   margin-top: 40px;
 }
 
-/* Linktree button */
 .button {
   display: inline-block;
   padding: 10px 20px;
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
   border-radius: 4px;
   text-decoration: none;
-  color: white;
+  color: #fff;
   margin-bottom: 20px;
   transition: 0.2s;
 }
 
 .button:hover {
-  background: white;
-  color: black;
+  background: #fff;
+  color: #000;
 }
 
-/* Pop button on side */
 .side {
   position: fixed;
   right: 40px;
@@ -74,9 +68,9 @@ h1 {
 .pop {
   margin-top: 8px;
   padding: 10px 18px;
-  border: 1px solid white;
+  border: 1px solid #fff;
   background: none;
-  color: white;
+  color: #fff;
   cursor: pointer;
   transition: transform 0.1s;
 }
@@ -85,7 +79,6 @@ h1 {
   transform: scale(1.2);
 }
 
-/* Tiny "a" in corner */
 .corner-a {
   position: fixed;
   top: 10px;
@@ -94,6 +87,7 @@ h1 {
   color: #888;
   cursor: pointer;
 }
+
 .corner-a:hover {
   color: #fff;
 }
@@ -119,9 +113,8 @@ h1 {
 </div>
 
 <script>
-// Pop sound
 function popSound(){
-  const audio = new Audio("https://www.soundjay.com/buttons/sounds/button-09.mp3");
+  var audio = new Audio("https://www.soundjay.com/buttons/sounds/button-09.mp3");
   audio.play();
 }
 </script>
