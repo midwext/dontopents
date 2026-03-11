@@ -6,7 +6,7 @@
 <title>tex totten</title>
 
 <style>
-/* Body and fade-in animation */
+/* Fade-in body */
 body {
   margin: 0;
   background: #0b0b0b;
@@ -78,11 +78,32 @@ h1 {
   background: none;
   color: white;
   cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.pop:active {
+  transform: scale(1.2);
+}
+
+/* Tiny "a" in corner */
+.corner-a {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  color: #888;
+  cursor: pointer;
+}
+.corner-a:hover {
+  color: #fff;
 }
 </style>
 </head>
 
 <body>
+
+<!-- Tiny corner link -->
+<div class="corner-a" onclick="window.location='contact.html'">a</div>
 
 <div class="container">
   <h1>tex totten</h1>
@@ -98,8 +119,9 @@ h1 {
 </div>
 
 <script>
+// Pop sound
 function popSound(){
-  let audio = new Audio("https://www.soundjay.com/buttons/sounds/button-09.mp3");
+  const audio = new Audio("https://www.soundjay.com/buttons/sounds/button-09.mp3");
   audio.play();
 }
 </script>
