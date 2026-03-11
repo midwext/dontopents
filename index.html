@@ -4,67 +4,82 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tex Totten</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+<title>tex totten</title>
 
 <style>
 
 body{
 margin:0;
 background:#0b0b0b;
-color:#f5f5f5;
-font-family:"Space Grotesk",sans-serif;
-text-align:center;
+color:#ffffff;
+font-family: Arial, Helvetica, sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+animation: fadein 1.2s ease;
+}
+
+@keyframes fadein{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 .container{
-max-width:900px;
-margin:auto;
-padding:80px 20px;
+max-width:600px;
+text-align:left;
 }
 
 h1{
-font-size:4rem;
-letter-spacing:2px;
+font-weight:normal;
+font-size:2.5rem;
 margin-bottom:40px;
+text-transform:lowercase;
+}
+
+.quote{
+font-size:0.95rem;
+opacity:0.75;
+line-height:1.6;
+margin-top:40px;
 }
 
 .button{
 display:inline-block;
-padding:14px 36px;
-border-radius:40px;
-border:1px solid #2f2f2f;
-background:#141414;
-color:#fff;
+padding:10px 20px;
+border:1px solid #ffffff;
+border-radius:4px;
 text-decoration:none;
-font-size:1rem;
-margin-bottom:60px;
-transition:.25s;
+color:white;
+margin-bottom:20px;
+transition:.2s;
 }
 
 .button:hover{
-background:#fff;
-color:#000;
-transform:translateY(-2px);
+background:white;
+color:black;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
+.side{
+position:fixed;
+right:40px;
+bottom:40px;
+text-align:center;
 }
 
-.grid img{
-width:100%;
-border-radius:10px;
-background:#111;
-padding:10px;
-transition:.3s;
-}
-
-.grid img:hover{
-transform:scale(1.05);
+.pop{
+margin-top:8px;
+padding:10px 18px;
+border:1px solid white;
+background:none;
+color:white;
+cursor:pointer;
 }
 
 </style>
@@ -74,19 +89,29 @@ transform:scale(1.05);
 
 <div class="container">
 
-<h1>Tex Totten</h1>
+<h1>tex totten</h1>
 
-<a class="button" href="https://linktr.ee/tex23">My Stuff</a>
+<a class="button" href="https://linktr.ee/tex23">linktree</a>
 
-<div class="grid">
-
-<img src="le-male-elixir.jpg">
-<img src="bleu-de-chanel.jpg">
-<img src="moyu-logo.png">
-
+<div class="quote">
+"Before you criticize someone, you should walk a mile in their shoes. That way when you criticize them, you are a mile away from them and you have their shoes."
 </div>
 
 </div>
+
+<div class="side">
+<div>pop button</div>
+<button class="pop" onclick="popSound()">pop</button>
+</div>
+
+<script>
+
+function popSound(){
+let audio = new Audio("https://www.soundjay.com/buttons/sounds/button-09.mp3");
+audio.play();
+}
+
+</script>
 
 </body>
 </html>
