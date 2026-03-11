@@ -6,36 +6,27 @@
 
 <title>Tex Totten</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-height:100vh;
 background:#0b0b0b;
 color:#f5f5f5;
-display:flex;
-align-items:center;
-justify-content:center;
-font-family:"Space Grotesk", sans-serif;
+font-family:"Space Grotesk",sans-serif;
+text-align:center;
 }
 
 .container{
-text-align:center;
+max-width:900px;
+margin:auto;
+padding:80px 20px;
 }
 
 h1{
 font-size:4rem;
-font-weight:600;
 letter-spacing:2px;
-margin-bottom:30px;
-}
-
-.subtitle{
-font-family:"JetBrains Mono", monospace;
-font-size:0.9rem;
-opacity:0.6;
 margin-bottom:40px;
 }
 
@@ -48,14 +39,32 @@ background:#141414;
 color:#fff;
 text-decoration:none;
 font-size:1rem;
-transition:all .25s ease;
+margin-bottom:60px;
+transition:.25s;
 }
 
 .button:hover{
-background:#ffffff;
+background:#fff;
 color:#000;
 transform:translateY(-2px);
-box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.grid img{
+width:100%;
+border-radius:10px;
+background:#111;
+padding:10px;
+transition:.3s;
+}
+
+.grid img:hover{
+transform:scale(1.05);
 }
 
 </style>
@@ -67,15 +76,17 @@ box-shadow:0 10px 25px rgba(0,0,0,.4);
 
 <h1>Tex Totten</h1>
 
-<div class="subtitle">
-personal site
-</div>
+<a class="button" href="https://linktr.ee/tex23">My Stuff</a>
 
-<a class="button" href="https://linktr.ee/tex23">
-My Stuff
-</a>
+<div class="grid">
+
+<img src="le-male-elixir.jpg">
+<img src="bleu-de-chanel.jpg">
+<img src="moyu-logo.png">
+
+</div>
 
 </div>
 
 </body>
-</html
+</html>
